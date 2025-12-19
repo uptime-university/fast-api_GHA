@@ -1,0 +1,13 @@
+name: tetsing self host running
+
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build:
+        runs-on: [self-hosted, Linux, loki]
+        steps:
+            - uses: actions/checkout@v4
+            - run: echo "Running on self-hosted runner"
+            - run: hostname
