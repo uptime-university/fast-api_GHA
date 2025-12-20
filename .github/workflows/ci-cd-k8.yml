@@ -57,10 +57,10 @@ jobs:
             - name: Checkout repo (for manifests)
               uses: actions/checkout@v4
 
-            - name: Update image in deployment
-              run: |
-                  kubectl set image deployment/fast-api-gha \
-                    fast-api-gha=$REGISTRY/$IMAGE_NAME:${{ github.sha }}
+            # - name: Update image in deployment
+            #   run: |
+            #       kubectl set image deployment/fast-api-gha \
+            #         fast-api-gha=$REGISTRY/$IMAGE_NAME:${{ github.sha }}
 
             - name: Apply manifests
               run: |
