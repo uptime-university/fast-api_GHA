@@ -21,6 +21,12 @@ jobs:
             packages: write # REQUIRED for GHCR
 
         steps:
+            - name: Debug docker access
+              run: |
+                  whoami
+                  id
+                  docker ps
+
             - name: Checkout source code
               uses: actions/checkout@v4
 
