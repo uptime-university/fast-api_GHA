@@ -20,6 +20,8 @@ spec:
       labels:
         app: fast-api-gha
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
         - name: fast-api-gha
           image: ghcr.io/uptime-university/fast-api_gha:latest
