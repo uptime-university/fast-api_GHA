@@ -8,7 +8,12 @@ temp_memory = []
 id_ref = []
 
 
-@app.get("/", status_code=status.HTTP_200_OK)
+@app.get("/health", status_code=200)
+def health():
+    return {"status": "ok"}
+
+
+@app.get("/home", status_code=status.HTTP_200_OK)
 async def welcome():
     return {"message": "Welcome to the Uptime University!"}
 
