@@ -18,6 +18,9 @@ async def welcome():
     return {"message": "Welcome to the Uptime University!"}
 
 
+# api point for get user
+
+
 @app.get("/users", status_code=status.HTTP_200_OK)
 async def get_users(
     id: int | None = Query(None, description="Put user id to get info")
